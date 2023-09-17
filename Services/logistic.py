@@ -37,7 +37,7 @@ class ApiService(MethodsContrat):
             return [list_users, 200]
 
         except Exception as e:
-            return [{"alert": str(e)}]
+            return [{"alert": str(e)}, 500]
 
     async def get_user(self, _id_user: str) -> list:
         try:

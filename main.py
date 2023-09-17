@@ -24,7 +24,7 @@ async def update_user(_id: str, user_data: User) -> JSONResponse:
 @app.get("/users")
 async def users() -> JSONResponse:
     all_users: list = await service.get_users()
-    return JSONResponse(content=all_users[0], status_code=all_users[1], headers={"Content-Type": "application/json; charset=UTF-8"})
+    return JSONResponse(content=all_users[0], status_code=all_users[1])
 
 
 @app.get("/user/{_id}")
