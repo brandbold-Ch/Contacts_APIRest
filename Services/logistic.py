@@ -7,7 +7,7 @@ from bson.objectid import ObjectId
 
 class ApiService(MethodsContrat):
 
-    __CLIENT: AsyncIOMotorClient = AsyncIOMotorClient("mongodb://localhost:27017")
+    __CLIENT: AsyncIOMotorClient = AsyncIOMotorClient("mongodb+srv://223031:EWwe05ZQcQgV9AuR@cluster0.glnagiz.mongodb.net/?retryWrites=true&w=majority")
     __DB_USERS: str = "Users"
 
     def __init__(self):
